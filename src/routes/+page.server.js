@@ -74,6 +74,8 @@ export const load = async ({locals}) => {
     // Return json
     const res = await Promise.all([reqThreads, reqMembers, reqTags]);
 
+    // console.log(res.body)
+
     const threads = await res[0].json();
     const members = await res[1].json();
     const tags = await res[2].json();
